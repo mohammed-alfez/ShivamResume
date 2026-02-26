@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #f9f9f9;
+    background: #f4f4f4;
     color: #222;
     line-height: 1.6;
 }
@@ -16,7 +16,6 @@ body {
     margin: 40px auto;
     background: #ffffff;
     padding: 40px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 header {
@@ -29,18 +28,34 @@ h1 {
 }
 
 .role {
-    color: #555;
     margin-top: 5px;
+    color: #555;
 }
 
 .contact {
-    margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
     font-size: 14px;
-    color: #666;
 }
 
-.contact span {
-    margin-right: 15px;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #444;
+}
+
+.contact-item svg {
+    width: 16px;
+    height: 16px;
+    fill: #555;
+}
+
+.contact-item:hover {
+    text-decoration: underline;
 }
 
 section {
@@ -50,7 +65,7 @@ section {
 h2 {
     font-size: 18px;
     margin-bottom: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -73,20 +88,31 @@ ul {
     margin-bottom: 6px;
 }
 
-footer {
+.declaration {
     margin-top: 40px;
-    font-size: 13px;
-    color: #555;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
 }
 
+.decl-footer {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive */
+
 @media (max-width: 768px) {
+
     .container {
         padding: 20px;
+        margin: 15px;
     }
 
     h1 {
         font-size: 24px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 8px;
     }
 }
